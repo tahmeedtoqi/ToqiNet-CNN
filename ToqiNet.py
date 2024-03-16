@@ -51,13 +51,9 @@ class ToqiNet(nn.Module):
       return sum(p.numel() for p in self.parameters() if p.requires_grad)
     
 
+input_shape = (3, 227, 227)  
+num_classes = 2  
 
-# Define input shape and number of classes
-input_shape = (3, 227, 227)  # AlexNet input shape (channels, height, width)
-num_classes = 2  # For binary classification (e.g., cats vs. dogs)
-
-# Create the model instance
 model = ToqiNet(num_classes)
 
-# Display model architecture
 print(model)
